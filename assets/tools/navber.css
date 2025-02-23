@@ -1,0 +1,236 @@
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #00000018;
+}
+header nav{
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+nav .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-title);
+}
+.logo h1{
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+nav .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links ul{
+    display: flex;
+    margin: auto;
+}
+.links ul li{
+ display: flex;
+ margin-right: 30px;
+}
+.links ul li a{
+   text-transform: capitalize;
+   color: var(--color-title);
+   font-weight: 700;
+   font-size: 16px;
+}
+.links ul li .active{
+    color: var(--color-button);
+}
+.links ul li a:hover{
+    color: var(--color-button);
+}
+.links .dropdown_container {
+    position: relative;
+    gap: .5em;
+}
+.links .dropdown_container .dropdown {
+    position: absolute;
+    right: 0;
+    top: 1.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    flex-direction: column;
+    padding: 1em;
+    background-color: #fff;
+    opacity: 0;
+    z-index: 10;
+    visibility: hidden;
+}
+.dropdown_container:hover .dropdown {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown_container i{
+    margin: auto;
+}
+.dropdown_container:hover i {
+    transform: rotate(180deg);
+    color: var(--color-button);
+}
+.button{
+    padding: 10px 27px;
+    background-color: var(--color-button);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.button:hover{
+    background-color: #4153f1d6;
+}
+.button a{
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 700;
+
+}
+nav .icon-menu{
+    position: relative;
+    display: none;
+}
+nav .icon-menu .line-top{
+    display: flex;
+    width: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+nav .icon-menu .line-top span{
+    background-color: #333;
+    margin-bottom: 5px; 
+    height: 2px;
+}
+nav .icon-menu .line-top span:first-child{
+    width: 100%;
+}
+nav .icon-menu .line-top span:nth-child(2){
+    width: 50%;
+    transition: 0.3s;
+}
+nav .icon-menu .line-top:hover span:nth-child(2){
+width: 100%;
+}
+nav .icon-menu .line-top span:last-child{
+    width: 100%;
+}
+nav .icon-menu ul{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    transition: 0.3s;
+    flex-direction: column;
+}
+nav .icon-menu ul li{
+    display: flex;
+}
+nav .icon-menu:hover ul{
+    display: block;
+}
+nav .icon-menu ul li a{
+    display: block;
+    padding: 15px;
+    color: #333;
+    font-family: "Work Sans", serif;
+    transition: 0.3s;
+}
+nav .icon-menu ul li a:hover{
+    padding-left: 25px;
+}
+nav .icon-menu ul li:not(:last-child){
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+nav .icon-menu ul::before{
+    content: '';
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    right: 5px;
+    top: -20px;
+}
+nav .icon-menu .dropdown_container {
+    position: relative;
+    gap: .5em;
+}
+.dropdown_container i{
+    margin: auto;
+}
+.dropdown_container:hover i {
+    transform: rotate(180deg);
+    color: var(--color-button);
+}
+@media (max-width: 768px) {
+    header{
+        width: 100%;
+        margin: auto;
+        position: relative;
+    }
+   header nav{
+    width: 100%;
+    padding: 0;
+    gap: 20px;
+    justify-content: space-around;
+   }
+    nav .links{
+        display: none;
+    }
+    nav .icon-menu {
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+    }
+    nav .button{
+         display: none;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav .icon-menu{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    nav .links{
+        display: none;
+    }
+}
+@media (min-width: 992px) and (max-width: 1221px) {
+    header{
+        width: 100%;
+    }
+    .media{
+        display: flex;
+        gap: 20px;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        gap: 400px;
+    }
+    nav .icon-menu{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    nav .links{
+        display: none;
+    }
+}
