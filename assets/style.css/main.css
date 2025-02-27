@@ -125,7 +125,14 @@
         font-size: 15px;
     }
     .home .content .box-img img{
-      display: none;
+      display: block;
+      width: 90%;
+    }
+    .home .content .box-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: -1;
     }
     
 }
@@ -143,10 +150,16 @@
     .home .content .box-title .box-icons{
         display: flex;
     }
-    .home .content .box-img{
-       display: none;
-    }
-    
+    .home .content .box-img img{
+        display: block;
+        width: 90%;
+      }
+      .home .content .box-img{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          order: -1;
+      }
 }
 /* start about */
 .about{
@@ -690,6 +703,9 @@
 @media (max-width: 768px) {
     .Pricing .content{
         padding: 10px;
+    }
+    .Pricing .content .box:hover{
+        transform: none;
     }
     
 }
